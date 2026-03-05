@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HANAGA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">HANAGA</div>
+
+    <div class="burger" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+        <a onclick="showSection('hoodies')">Худи</a>
+        <a onclick="showSection('t-shirts')">Футболки</a>
+        <a onclick="showSection('pants')">Штаны</a>
+        <a onclick="showSection('accessories')">Аксессуары</a>
+        <a onclick="showSection('reviews')">Отзывы</a>
+        <a onclick="showSection('contact')">Контакты</a>
+    </nav>
+
+    <div class="cart-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+</header>
+
+<div id="cart" class="cart">
+    <h2>Корзина</h2>
+    <div id="cart-items"></div>
+    <p>Итого: <span id="cart-total">0</span></p>
+    <button onclick="toggleCart()">Закрыть</button>
+</div>
+
+<!-- ХУДИ -->
+<section id="hoodies" class="section active">
+<h2>Худи</h2>
+
+<div class="product" data-name="Sakura Hoodie" data-price="60" data-stock="in">
+   <img src="hoodie.jpg" 
+   width="300px" height="200">
+    <h3>Adidas Hoodie</h3>
+    <p class="stock"></p>
+    <p class="price"></p>
+
+    <select class="size">
+        <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+
+    <div class="stars"></div>
+
+    <button onclick="addToCart(this)">Добавить</button>
+</div>
+</section>
+
+<!-- ШТАНЫ -->
+<section id="pants" class="section">
+<h2>Штаны</h2>
+
+<div class="product" data-name="Tokyo Pants" data-price="50" data-stock="soon">
+    <img src="jeans.jpg"
+    width="300px" height="200">
+    <h3>Jeans</h3>
+    <p class="stock"></p>
+    <p class="price"></p>
+
+    <select class="size">
+        <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
+
+    <div class="stars"></div>
+
+    <button onclick="addToCart(this)">Добавить</button>
+</div>
+</section>
+
+ <!-- ФУТБОЛКИ -->
+<section id="t-shirts" class="section">
+<h2>Футболки</h2>
+
+<div class="product" data-name="Sakura t-shirt" data-price="50" data-stock="soon">
+    <img src="shirt.jpg" width="300" height="200">
+    <h3>Sakura t-shirt</h3>
+    <p class="stock"></p>
+    <p class="price"></p>
+
+    <select class="size">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
+
+    <div class="stars"></div>
+
+    <button onclick="addToCart(this)">Добавить</button>
+</div>
+
+
+<!-- ВТОРАЯ ФУТБОЛКА -->
+<div class="product" data-name="Japanese t-shirt" data-price="45" data-stock="in">
+    <img src="fr.jpg" width="300" height="200">
+    <h3>Japanese t-shirt</h3>
+    <p class="stock"></p>
+    <p class="price"></p>
+
+    <select class="size">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
+
+    <div class="stars"></div>
+
+    <button onclick="addToCart(this)">Добавить</button>
+</div>
+
+</section>
+
+<!-- АКСЕССУАРЫ -->
+<section id="accessories" class="section">
+<h2>Аксессуары</h2>
+
+<div class="product" data-name="Bag" data-price="25" data-stock="in">
+    <img src="bag.jpg"
+    width="300px" height="200">
+    <h3>Bag</h3>
+    <p class="stock"></p>
+    <p class="price"></p>
+
+    <div class="stars"></div>
+
+    <button onclick="addToCart(this)">Добавить</button>
+</div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section id="reviews" class="section">
+<h2>Отзывы</h2>
+<textarea id="review-text" placeholder="Напишите отзыв..."></textarea>
+<button onclick="addReview()">Отправить</button>
+<div id="review-list"></div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contact" class="section">
+<h2>Контакты</h2>
+<p>Email: hanaga.brand@email.com</p>
+<p>Instagram: @hanaga.store</p>
+<p>Telegram: @hanagastore</p>
+</section>
+
+
+<div class="music-player">
+<audio id="music" controls>
+<source src="music.mp3" type="audio/mpeg">
+Ваш браузер не поддерживает аудио
+</audio>
+</div>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
